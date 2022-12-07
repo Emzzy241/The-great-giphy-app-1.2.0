@@ -26,7 +26,8 @@ export class SearchGiphyService {
                     throw Error(giphySearchResponse.statusText);
                 }
                     // calling the .json() method on my giphyResponse if I do get a successful call
-                    giphySearchResponse.json();
+                    // always use a return for functions or else they'll be undefined
+                    return giphySearchResponse.json();
             })
 
             // the catch block is where I handle the error I threw above in the if statement
